@@ -24,7 +24,4 @@ public class Tickets
 
     [Required(ErrorMessage = "El campo Descripción es obligatorio")]
     public string? Descripcion { get; set; }
-
-    [ForeignKey("TicketId")]
-    public ICollection<TicketsDetalle> TicketsDetalle { get; set; } = new List<TicketsDetalle>();
 }
