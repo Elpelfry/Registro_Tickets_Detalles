@@ -89,6 +89,7 @@
             var ticketCreado = await guardadoTicket.Content.ReadFromJsonAsync<Clientes>();
             resultado = 1;
             mensaje = "Registro Guardado";
+            clientes = new Clientes();
         }
         else
         {

@@ -157,7 +157,8 @@
             }
             resultado = 1;
             mensaje = "Registro Guardado";
-
+            ListaDetalles = new List<TicketsDetalle>();
+            tickets = new Tickets();
         }
         else
         {
@@ -169,7 +170,7 @@
     public void Agregar()
     {
         if (!string.IsNullOrEmpty(Detalle.Emisor) && !string.IsNullOrEmpty(Detalle.Mensaje))
-        {   
+        {
             if (ListaDetalles.Exists(p => p.Emisor == Detalle.Emisor))
             {
                 resultado = 3;
@@ -205,6 +206,7 @@
     public void Nuevo()
     {
         tickets = new Tickets();
+        ListaDetalles = new List<TicketsDetalle>();
         MensajeGuardar();
         tickets.Fecha = DateTime.Today;
     }
