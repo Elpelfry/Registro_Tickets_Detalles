@@ -9,4 +9,5 @@ public class Contexto : DbContext
 
     public DbSet<Clientes> Clientes { get; set; }
     public DbSet<Tickets> Tickets { get; set; }
+    public DbSet<TicketsDetalle> TicketsDetalle { get; set; }
 }
